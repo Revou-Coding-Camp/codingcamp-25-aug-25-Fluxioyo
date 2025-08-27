@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Saya</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">RW</div>
+      <span class="brand-name">Revou Web Project Wilsen</span>
+    </div>
+    <nav class="nav">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="profile.html">Our Profile</a>
+      <a class="nav-link" href="#portfolio" data-scroll>Portfolio</a>
+      <a class="nav-link" href="#contact" data-scroll>Message Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy">
+        <h1 id="welcomeTitle">Hi there, Welcome To Website</h1>
+        <p>This is our first practice website. Personalize it by entering your name below.</p>
+        <form id="nameForm" class="inline-form" novalidate>
+          <label for="displayName" class="sr-only">Your Name</label>
+          <input id="displayName" name="displayName" type="text" placeholder="Enter your name" aria-label="Your Name" />
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="clearName" class="btn ghost">Clear</button>
+        </form>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card"></div>
+      </div>
+    </section>
+
+    <section class="hq" id="portfolio">
+      <div class="container">
+        <h2>Our Headquarter</h2>
+        <div class="hq-grid">
+          <figure class="hq-item">
+            <div class="bubble"></div>
+            <figcaption>Jakarta</figcaption>
+          </figure>
+          <figure class="hq-item">
+            <div class="bubble"></div>
+            <figcaption>Bandung</figcaption>
+          </figure>
+          <figure class="hq-item">
+            <div class="bubble"></div>
+            <figcaption>Surabaya</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container split">
+        <div class="form-col">
+          <h2>Message Us</h2>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Full name" autocomplete="name" />
+              <small class="error" data-for="name"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+              <small class="error" data-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="e.g. +62 812 3456 7890" autocomplete="tel" />
+              <small class="error" data-for="phone"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
+              <small class="error" data-for="message"></small>
+            </div>
+
+            <button class="btn primary" type="submit">Submit</button>
+          </form>
+        </div>
+
+        <aside class="preview-col" aria-live="polite">
+          <div class="card">
+            <h3>Submission Preview</h3>
+            <dl class="kv">
+              <div><dt>Current time</dt><dd id="pv-time">–</dd></div>
+              <div><dt>Name</dt><dd id="pv-name">–</dd></div>
+              <div><dt>Email</dt><dd id="pv-email">–</dd></div>
+              <div><dt>Phone</dt><dd id="pv-phone">–</dd></div>
+              <div><dt>Message</dt><dd id="pv-message">–</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Created by RevoU</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
