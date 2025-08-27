@@ -8,9 +8,9 @@ const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const nav = $('.nav');
   if(!btn || !nav) return;
   btn.addEventListener('click', () => {
-    const open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
-    btn.setAttribute('aria-expanded', String(!open));
+    const isVisible = nav.classList.contains('show');
+    nav.classList.toggle('show');
+    btn.setAttribute('aria-expanded', String(!isVisible));
   });
 })();
 
